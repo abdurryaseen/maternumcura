@@ -34,7 +34,7 @@ p{color:var(--body)}
 .note{font-size:.9rem;margin:.75rem 0 0}
 .care{padding-block:4.5rem;background:#e9eee4}
 .intro{max-width:39rem;margin:1rem 0 1.75rem}
-.care-photo{display:block;width:100%;height:auto;border-radius:1.25rem;margin-bottom:2rem}
+.care-photo{display:block;width:min(100%, 620px);height:auto;border-radius:1.25rem;margin:0 auto 2rem}
 .care-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
 .care-grid article{border-top:1px solid #bcc8bc;padding-top:1rem}
 .care-grid p{margin:.65rem 0 0}
