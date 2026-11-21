@@ -22,4 +22,4 @@ Configure the payment amount and the package description in Stripe once the clie
 
 Run `python3 -m http.server 8000` in the repository root and visit `http://localhost:8000`.
 
-The photos in `assets/` were generated with OpenAI ImageGen for illustrative use. The brief was a warm, candid maternity photo of a Black expectant parent and partner at home and a matching portrait of a South Asian parent cradling a swaddled newborn.
+The photos in `assets/` were generated with OpenAI ImageGen for illustrative use. The brief was a warm, candid maternity photo of a Black expectant parent and partner at home and a matching portrait of a South Asian parent cradling a swaddled newborn. The childbirth education photo depicts a Black doula talking with Black and white expectant parents in a sunlit community studio.
