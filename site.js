@@ -20,6 +20,7 @@ const dialog = document.querySelector("dialog");
 const title = document.querySelector("#dialog-title");
 const copy = document.querySelector("#dialog-copy");
 const link = document.querySelector("#dialog-link");
+const contact = document.querySelector("#dialog-contact");
 const dismiss = document.querySelector("#dialog-dismiss");
 
 function secureUrl(value) {
@@ -39,6 +40,7 @@ for (const button of document.querySelectorAll("[data-service]")) {
     title.textContent = heading;
     copy.textContent = url ? description : "This online service is currently unavailable.";
     link.hidden = !url;
+    contact.hidden = Boolean(url);
     dismiss.hidden = Boolean(url);
 
     if (url) {

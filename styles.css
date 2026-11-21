@@ -56,6 +56,8 @@ summary{font-weight:700;cursor:pointer}
 details p{margin:.65rem 0 0}
 footer{background:#e9eee4;padding-block:1.4rem}
 .footer p{margin:0}
+.contact{display:flex;flex-direction:column;gap:.2rem;font-style:normal}
+.contact a,#dialog-contact a{text-underline-offset:.2em}
 dialog{width:min(92%,470px);border:1px solid var(--line);border-radius:1.25rem;background:var(--paper);color:var(--ink);padding:2.4rem 1.6rem 1.6rem}
 dialog h2{font-size:2rem}
 dialog::backdrop{background:#172b24aa}
