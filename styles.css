@@ -82,3 +82,7 @@ nav>a:not(.button){display:none}
 }
 @media(max-width:370px){.brand{font-size:1.2rem}.compact{padding-inline:.7rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+#private-questions{margin-bottom:1rem}
+#private-questions label{display:block;margin:.85rem 0 .25rem;font-weight:700;line-height:1.4}
+#private-questions select{display:block;width:100%;min-height:44px;border:1px solid #88968a;border-radius:.5rem;background:#fff;color:var(--ink);font:inherit;padding:.4rem .65rem}
