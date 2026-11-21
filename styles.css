@@ -104,3 +104,6 @@ nav>a:not(.button){display:none}
 .footer-links{display:flex;flex-wrap:wrap;gap:.5rem 1rem}
 .footer-links a{font-size:.94rem;font-weight:700;text-decoration:none}
 .footer-links a:hover{text-decoration:underline}
+
+.instagram-link{display:inline-grid;place-items:center;align-self:flex-start;width:44px;height:44px;border-radius:50%;color:var(--green)}
+.instagram-link:hover{background:var(--line)}
