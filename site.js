@@ -5,7 +5,7 @@ const serviceDetails = {
     linkLabel: "Open scheduling"
   },
   privateScheduling: {
-    title: "Book a private-pay intro call",
+    title: "Book a private-pay consultation call",
     description: "Choose a time to discuss prenatal support, package options, and pricing.",
     linkLabel: "Open scheduling"
   },
