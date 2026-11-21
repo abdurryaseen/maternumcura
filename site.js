@@ -21,6 +21,7 @@ const title = document.querySelector("#dialog-title");
 const copy = document.querySelector("#dialog-copy");
 const link = document.querySelector("#dialog-link");
 const contact = document.querySelector("#dialog-contact");
+const privateIntake = document.querySelector("#private-intake");
 const services = document.querySelector("#private-services");
 const serviceEmail = document.querySelector("#service-email");
 const serviceCheckboxes = [...services.querySelectorAll('input[type="checkbox"]')];
@@ -38,10 +39,14 @@ function secureUrl(value) {
 for (const button of document.querySelectorAll("[data-service]")) {
   button.addEventListener("click", () => {
     const service = button.dataset.service;
+    const isPrivatePay = service === "privateScheduling";
+    if (isPrivatePay) {
+      validateServiceSelection();
+      if (!privateIntake.reportValidity()) return;
+    }
     const { title: heading, description, linkLabel } = serviceDetails[service];
     const url = secureUrl(window.MATERNUMCURA?.[service]);
     title.textContent = heading;
-    const isPrivatePay = service === "privateScheduling";
     copy.textContent = url || isPrivatePay ? description : "This online service is currently unavailable.";
     link.hidden = !url;
     contact.hidden = Boolean(url);
@@ -68,6 +73,14 @@ function updateQuoteEmail() {
   serviceEmail.href = "mailto:support@maternumcura.com?subject=" + subject + "&body=" + encodeURIComponent(message);
 }
 
-services.addEventListener("change", updateQuoteEmail);
+function validateServiceSelection() {
+  const hasSelection = serviceCheckboxes.some(input => input.checked);
+  serviceCheckboxes[0].setCustomValidity(hasSelection ? "" : "Select at least one service before booking.");
+}
+
+services.addEventListener("change", () => {
+  validateServiceSelection();
+  updateQuoteEmail();
+});
 serviceEmail.addEventListener("click", updateQuoteEmail);
 updateQuoteEmail();

@@ -94,3 +94,6 @@ nav>a:not(.button){display:none}
 #private-services fieldset p{margin:0 0 .45rem}
 #private-services label{display:flex;align-items:flex-start;gap:.5rem;padding:.35rem 0;cursor:pointer}
 #private-services input{flex:none;width:1.15rem;height:1.15rem;margin:.22rem 0 0;accent-color:var(--green)}
+
+#private-intake{width:100%}
+#private-privacy{margin-top:0;font-size:.94rem}
