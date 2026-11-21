@@ -99,3 +99,8 @@ nav>a:not(.button){display:none}
 #private-privacy{margin-top:0;font-size:.94rem}
 
 .privacy-content h2{font-size:1.65rem;letter-spacing:normal}
+
+.about-title{font-size:clamp(2.6rem,5vw,4.5rem)}
+.footer-links{display:flex;flex-wrap:wrap;gap:.5rem 1rem}
+.footer-links a{font-size:.94rem;font-weight:700;text-decoration:none}
+.footer-links a:hover{text-decoration:underline}
