@@ -40,7 +40,7 @@ p{color:var(--body)}
 .care-grid p{margin:.65rem 0 0}
 .family-photo{display:block;width:100%;height:auto;border-radius:1rem}
 .start{padding-block:5rem}
-.path-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.path-grid{display:grid;align-items:start;grid-template-columns:1fr 1fr;gap:1.25rem}
 .path{display:flex;flex-direction:column;align-items:flex-start;padding:clamp(1.25rem,3vw,2.4rem);border-radius:1.25rem;border:1px solid var(--line);background:#edf1e8}
 .path.private{background:#f4e9e0;border-color:#e1cec1}
 .path h3{font-size:2rem}
@@ -83,11 +83,12 @@ nav>a:not(.button){display:none}
 @media(max-width:370px){.brand{font-size:1.2rem}.compact{padding-inline:.7rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-#private-questions{margin-bottom:1rem}
+#private-questions{width:100%;margin-bottom:1rem}
 #private-questions label{display:block;margin:.85rem 0 .25rem;font-weight:700;line-height:1.4}
 #private-questions select{display:block;width:100%;min-height:44px;border:1px solid #88968a;border-radius:.5rem;background:#fff;color:var(--ink);font:inherit;padding:.4rem .65rem}
 
-#private-services{margin-bottom:1rem}
+#private-services{width:100%}
+#service-email{margin-top:.65rem}
 #private-services fieldset{min-width:0;margin:0 0 1rem;padding:.65rem .85rem;border:1px solid var(--line);border-radius:.75rem}
 #private-services legend{font-weight:700;line-height:1.4}
 #private-services fieldset p{margin:0 0 .45rem}

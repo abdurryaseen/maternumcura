@@ -7,9 +7,9 @@
   <meta name="theme-color" content="#f8f5ee">
   <title>MaternumCura | Detroit Doula Care</title>
   <link rel="icon" href="assets/icon.png" type="image/png">
-  <link rel="stylesheet" href="styles.css?v=service-selection">
+  <link rel="stylesheet" href="styles.css?v=before-booking">
   <script defer src="config.js"></script>
-  <script defer src="site.js?v=service-selection"></script>
+  <script defer src="site.js?v=before-booking"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -68,11 +68,46 @@
         <h3>Private pay</h3>
         <p>For families who plan to pay directly. Choose the services you’re interested in, and we’ll put together a custom quote.</p>
         <ol>
-          <li><strong>Book a consultation call.</strong> Share your goals and ask about package options.</li>
+          <li><strong>Choose services and book a consultation call.</strong> Share your goals and ask about package options and pricing.</li>
           <li><strong>Confirm your package.</strong> Agree on what’s included, the schedule, and the price.</li>
           <li><strong>Pay through Stripe.</strong> Use the checkout link the practice sends after confirming your package.</li>
         </ol>
+        <div id="private-questions">
+          <p id="private-questions-note">These questions are optional and can help you prepare for the call. Your stage and payment answers stay on this page.</p>
+          <label for="intro-stage">What is your current pregnancy or postpartum status?</label>
+          <select id="intro-stage">
+            <option value="">Select an option</option>
+            <option>I’m 1–3 months pregnant.</option>
+            <option>I’m 4–6 months pregnant.</option>
+            <option>I’m 7–9 months pregnant.</option>
+            <option>I gave birth within the past 6 weeks.</option>
+            <option>I gave birth more than 6 weeks ago.</option>
+            <option>I’m planning ahead.</option>
+            <option>I’d prefer to share on the call.</option>
+          </select>
+          <label for="intro-payment">If we find a doula package that fits your needs, how would you prefer to pay?</label>
+          <select id="intro-payment">
+            <option value="">Select an option</option>
+            <option>I’m comfortable paying in full.</option>
+            <option>I may need a payment plan and would like to discuss options.</option>
+            <option>I’d like to explore Medicaid coverage.</option>
+          </select>
+        </div>
+        <div id="private-services">
+          <fieldset aria-describedby="service-selection-note">
+            <legend>Which services would you like in your package?</legend>
+            <p id="service-selection-note">Select any that interest you. We’ll use your choices to build a custom quote.</p>
+            <label><input type="checkbox" value="One-on-one childbirth education"> One-on-one childbirth education</label>
+            <label><input type="checkbox" value="Group childbirth education"> Group childbirth education</label>
+            <label><input type="checkbox" value="Active labor support and comfort techniques"> Active labor support and comfort techniques</label>
+            <label><input type="checkbox" value="Newborn care"> Newborn care</label>
+            <label><input type="checkbox" value="Postpartum belly binding"> Postpartum belly binding</label>
+            <label><input type="checkbox" value="Postpartum stews and teas"> Postpartum stews and teas</label>
+          </fieldset>
+        </div>
         <div class="path-actions"><button class="button" data-service="privateScheduling">Book a private-pay consultation call</button></div>
+          <a id="service-email" class="text-button" href="mailto:support@maternumcura.com">Email us for a custom quote</a>
+          <p class="note">Opens an email draft with your selected services. You can review it before sending.</p>
       </article>
     </div>
     <noscript><p>Enable JavaScript to open booking and intake options.</p></noscript>
@@ -117,41 +152,6 @@
   <form method="dialog"><button class="close" aria-label="Close">×</button></form>
   <h2 id="dialog-title"></h2>
   <p id="dialog-copy"></p>
-  <div id="private-questions" aria-describedby="private-questions-note" hidden>
-    <p id="private-questions-note">These questions are optional and can help you prepare for the call. Your stage and payment answers stay on this page.</p>
-    <label for="intro-stage">What is your current pregnancy or postpartum status?</label>
-    <select id="intro-stage">
-      <option value="">Select an option</option>
-      <option>I’m 1–3 months pregnant.</option>
-      <option>I’m 4–6 months pregnant.</option>
-      <option>I’m 7–9 months pregnant.</option>
-      <option>I gave birth within the past 6 weeks.</option>
-      <option>I gave birth more than 6 weeks ago.</option>
-      <option>I’m planning ahead.</option>
-      <option>I’d prefer to share on the call.</option>
-    </select>
-    <label for="intro-payment">If we find a doula package that fits your needs, how would you prefer to pay?</label>
-    <select id="intro-payment">
-      <option value="">Select an option</option>
-      <option>I’m comfortable paying in full.</option>
-      <option>I may need a payment plan and would like to discuss options.</option>
-      <option>I’d like to explore Medicaid coverage.</option>
-    </select>
-  </div>
-  <div id="private-services" hidden>
-    <fieldset aria-describedby="service-selection-note">
-      <legend>Which services would you like in your package?</legend>
-      <p id="service-selection-note">Select any that interest you. We’ll use your choices to build a custom quote.</p>
-      <label><input type="checkbox" value="One-on-one childbirth education"> One-on-one childbirth education</label>
-      <label><input type="checkbox" value="Group childbirth education"> Group childbirth education</label>
-      <label><input type="checkbox" value="Active labor support and comfort techniques"> Active labor support and comfort techniques</label>
-      <label><input type="checkbox" value="Newborn care"> Newborn care</label>
-      <label><input type="checkbox" value="Postpartum belly binding"> Postpartum belly binding</label>
-      <label><input type="checkbox" value="Postpartum stews and teas"> Postpartum stews and teas</label>
-    </fieldset>
-    <a id="service-email" class="button" href="mailto:support@maternumcura.com">Email us for a custom quote</a>
-    <p class="note">Opens an email draft with your selected services. You can review it before sending.</p>
-  </div>
   <a id="dialog-link" class="button" hidden></a>
   <p id="dialog-contact" hidden>For help, <a href="mailto:support@maternumcura.com">email us</a> or call <a href="tel:+13134341456">(313) 434-1456</a>.</p>
   <form method="dialog" id="dialog-dismiss"><button class="button">Close</button></form>
