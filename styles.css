@@ -38,6 +38,7 @@ p{color:var(--body)}
 .care-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
 .care-grid article{border-top:1px solid #bcc8bc;padding-top:1rem}
 .care-grid p{margin:.65rem 0 0}
+.family-photo{display:block;width:100%;height:auto;border-radius:1rem}
 .start{padding-block:5rem}
 .path-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
 .path{display:flex;flex-direction:column;align-items:flex-start;padding:clamp(1.25rem,3vw,2.4rem);border-radius:1.25rem;border:1px solid var(--line);background:#edf1e8}
