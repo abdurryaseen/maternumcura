@@ -22,6 +22,9 @@ const copy = document.querySelector("#dialog-copy");
 const link = document.querySelector("#dialog-link");
 const contact = document.querySelector("#dialog-contact");
 const questions = document.querySelector("#private-questions");
+const services = document.querySelector("#private-services");
+const serviceEmail = document.querySelector("#service-email");
+const serviceCheckboxes = [...services.querySelectorAll('input[type="checkbox"]')];
 const dismiss = document.querySelector("#dialog-dismiss");
 
 function secureUrl(value) {
@@ -42,6 +45,7 @@ for (const button of document.querySelectorAll("[data-service]")) {
     const isPrivatePay = service === "privateScheduling";
     copy.textContent = url || isPrivatePay ? description : "This online service is currently unavailable.";
     questions.hidden = !isPrivatePay;
+    services.hidden = !isPrivatePay;
     link.hidden = !url;
     contact.hidden = Boolean(url);
     dismiss.hidden = Boolean(url);
@@ -57,7 +61,23 @@ for (const button of document.querySelectorAll("[data-service]")) {
   });
 }
 
+function updateQuoteEmail() {
+  const selected = serviceCheckboxes.filter(input => input.checked).map(input => "- " + input.value);
+  const subject = encodeURIComponent("Private-pay doula consultation and quote");
+  const message = selected.length
+    ? "Hi, I’d like to discuss a private-pay package for:\n\n" + selected.join("\n")
+    : "Hi, I’d like to discuss private-pay doula services and schedule a consultation.";
+  serviceEmail.href = "mailto:support@maternumcura.com?subject=" + subject + "&body=" + encodeURIComponent(message);
+}
+
+services.addEventListener("change", updateQuoteEmail);
+updateQuoteEmail();
+
 dialog.addEventListener("close", () => {
+  for (const checkbox of serviceCheckboxes) {
+    checkbox.checked = false;
+  }
+  updateQuoteEmail();
   for (const select of questions.querySelectorAll("select")) {
     select.selectedIndex = 0;
   }
