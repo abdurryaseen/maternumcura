@@ -97,3 +97,5 @@ nav>a:not(.button){display:none}
 
 #private-intake{width:100%}
 #private-privacy{margin-top:0;font-size:.94rem}
+
+.privacy-content h2{font-size:1.65rem;letter-spacing:normal}
